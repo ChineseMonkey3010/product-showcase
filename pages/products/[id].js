@@ -1,4 +1,4 @@
-import { getProductById, getProducts } from '../../lib/api';
+import { getProductById } from '../../lib/api';
 import Image from 'next/image';
 import { useFavorites } from '../../components/Favorites';
 import { useRouter } from 'next/router';
