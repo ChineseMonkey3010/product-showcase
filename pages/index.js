@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import { getProducts } from '../lib/api';
 import ProductCard from '../components/ProductCard';
 import { useState } from 'react';

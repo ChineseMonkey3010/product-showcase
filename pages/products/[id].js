@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import { getProductById } from '../../lib/api';
 import Image from 'next/image';
 import { useFavorites } from '../../components/Favorites';
