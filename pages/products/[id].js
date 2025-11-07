@@ -109,17 +109,7 @@ export default function ProductDetail({ product }) {
   );
 }
 
-export async function getStaticPaths() {
-  // Get 5 products to generate paths for
-  const products = await getProducts(5);
-  const paths = products.map(product => ({
-    params: { id: product.id.toString() }
-  }));
-  
-  return { paths, fallback: true };
-}
-
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   try {
     const product = await getProductById(params.id);
     return { props: { product } };

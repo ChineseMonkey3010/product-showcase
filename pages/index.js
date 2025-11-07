@@ -67,12 +67,19 @@ export default function Home({ initialProducts }) {
   );
 }
 
-export async function getStaticProps() {
-  const products = await getProducts(5);
-  return {
-    props: {
-      initialProducts: products,
-    },
-    revalidate: 60, // Re-generate page every 60 seconds
-  };
+export async function getServerSideProps() {
+  try {
+    const products = await getProducts(5);
+    return {
+      props: {
+        initialProducts: products,
+      }
+    };
+  } catch (error) {
+    return {
+      props: {
+        initialProducts: []
+      }
+    };
+  }
 }
