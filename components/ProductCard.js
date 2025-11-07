@@ -8,14 +8,14 @@ export default function ProductCard({ product }) {
   return (
     <div className="border rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
       <div className="relative h-48">
-  <Image
-    src={product.image}
-    alt={product.title}
-    fill
-    style={{ objectFit: 'contain' }}
-    className="p-4 bg-gray-100"
-  />
-</div>
+        <Image
+            src={product.image}
+            alt={product.title}
+            fill
+            style={{ objectFit: 'contain' }}
+            className="p-4 bg-gray-100"
+        />
+        </div>
       
       <div className="p-4">
         <h3 className="font-bold text-lg mb-2 line-clamp-2 h-12">{product.title}</h3>
